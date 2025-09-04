@@ -1,0 +1,24 @@
+﻿@{
+	// var listItems = ViewBag.ListItems as List<NetCoreMVCLab03.Models.ListItem>;
+	// var selectedItem = ViewBag.SelectedItem as NetCoreMVCLab03.Models.ListItem;
+}
+
+<div class="Index_page">
+	<div class="Index_container">
+		<div class="Index_contaier_navbar">
+			<div>
+				<partial name ="~/Views/Components/_NavProduct.cshtml" />
+				@* <div>
+					<span>Danh mục sản phẩm</span>
+					@foreach (var item in listItems)
+					{
+						<div>@item.Id</div>
+					}
+				</div> *@
+			</div>
+		</div>
+		<div class="Index_contaier_products">
+			<partial name="~/Views/Components/_ListItems.cshtml"/>
+		</div>
+	</div>
+</div>

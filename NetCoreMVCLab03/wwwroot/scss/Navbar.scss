@@ -1,0 +1,33 @@
+@use "root.scss" as *;
+
+.Navbar {
+    width: 100%;
+    height: 3rem;
+}
+
+.Navbar_Container {
+    display: flex;
+    background: $bg-nav;
+    align-items: center;
+
+    .NavBar_Item {
+        text-align: center;
+        padding: 1rem 0rem;
+    }
+
+    .NavBar_Item a {
+        @include a;
+        //text-decoration: none;
+        padding: 1rem;
+        color: dimgray !important;
+    }
+}
+
+.active {
+    background: black;
+    color: white !important;
+}
+
+.NavBar_Item a:hover {
+    color: white;
+}

@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	var Controller = ViewContext.RouteData.Values["controller"]?.ToString();
+	var Action = ViewContext.RouteData.Values["action"]?.ToString();
+}
+
+<nav class="Navbar">
+	<div class="Navbar_Container">
+		<div class="NavBar_Item nav-item"><a asp-controller="Home" asp-action="Index">DEMO LAB</a></div>
+		<div class="NavBar_Item nav-item"><a class="@(Controller == "Home" && Action == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a></div>
+		<div class="NavBar_Item nav-item"><a class="@(Controller == "Home" && Action == "Privacy" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Giới thiệu</a></div>
+		<div class="NavBar_Item nav-item"><a class="@(Controller == "Home" && Action == "Privacy" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Liên hệ</a></div>
+		<div class="NavBar_Item nav-item"><a class="@(Controller == "Home" && Action == "Privacy" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Sản phẩm</a></div>
+	</div>
+</nav>

@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+.footer .footer_contaier {
+  display: flex;
+  height: fit-content;
+  background: #333;
+}
+.footer .footer_contaier .footer_f {
+  width: 50%;
+  height: fit-content;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 1rem;
+  color: white;
+}
+.footer .footer_contaier .footer_f p {
+  line-height: normal;
+}
+
+/*# sourceMappingURL=Footer.css.map */

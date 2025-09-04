@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	var listItems = ViewBag.ListItems as List<NetCoreMVCLab03.Models.ListItem>;
+	var selectedItem = ViewBag.SelectedItem as NetCoreMVCLab03.Models.ListItem;
+}
+
+<div class="NavProduct">
+	<div class="Nav">
+		<div class="Tile">
+			<span>Danh mục sản phẩm</span>
+		</div>
+		<div class="ListProduct">
+			@foreach (var item in listItems)
+			{
+				<div class="IT">
+					<a class="@(selectedItem != null && selectedItem.Id == item.Id ? "active" : "")" asp-controller="Home" asp-action="Index" asp-route-id="@(item.Id)">@(item.Id)</a>
+				</div>
+			}
+		</div>
+	</div>
+	<div class="img">
+		<img src="~/Img/images.png" alt="">
+	</div>
+</div>

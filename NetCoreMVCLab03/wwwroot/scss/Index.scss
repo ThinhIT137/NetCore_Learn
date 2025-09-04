@@ -1,0 +1,83 @@
+﻿@use "root.scss" as *;
+@use "product.scss";
+
+.Index_page {
+    width: 100%;
+    padding: 1rem 3rem;
+
+    .Index_container {
+        display: flex;
+        //justify-content: center;
+        //align-items: center;
+        padding: 1rem 0;
+
+        .Index_contaier_navbar {
+            //grid-column: 1;
+
+            .NavProduct {
+                .Nav {
+                    border: 1px solid #546fca;
+
+                    .Tile {
+                        background: #546fca;
+                        text-align: center !important;
+                        padding: 0 !important;
+                        color: white;
+                    }
+
+                    .IT {
+                        padding-left: 1rem;
+                        border: 1px solid black;
+                    }
+
+                    .IT a {
+                        @include a;
+                        color: black !important;
+                    }
+
+                    .IT a:hover {
+                        color: green !important;
+                    }
+
+                    .IT .active {
+                        color: green !important;
+                        background: none;
+                    }
+                }
+
+                .img {
+                    padding-top: 1rem;
+                }
+            }
+        }
+
+        .Index_contaier_products {
+            height: fit-content;
+            width: 100%;
+            grid-column: 2;
+
+            .ListItems {
+                padding-left: 3rem;
+
+                .ListItems_title {
+                    background: #546fca;
+                    padding: 0.5rem;
+                }
+
+                .ListItems_Container {
+                    .product-list {
+                        display: flex !important;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//.product-list {
+//    display: flex;
+//    flex-wrap: wrap;
+//    gap: 1rem; // tạo khoảng cách giữa các item
+//    justify-content: flex-start; // hoặc space-between nếu muốn đều
+//}

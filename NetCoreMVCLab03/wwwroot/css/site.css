@@ -1,0 +1,132 @@
+.Navbar {
+  width: 100%;
+  height: 3rem;
+}
+
+.Navbar_Container {
+  display: flex;
+  background: #292323;
+  align-items: center;
+}
+.Navbar_Container .NavBar_Item {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+.Navbar_Container .NavBar_Item a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  color: dimgray !important;
+}
+
+.active {
+  background: black;
+  color: white !important;
+}
+
+.NavBar_Item a:hover {
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+.footer .footer_contaier {
+  display: flex;
+  height: fit-content;
+  background: #333;
+}
+.footer .footer_contaier .footer_f {
+  width: 50%;
+  height: fit-content;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 1rem;
+  color: white;
+}
+.footer .footer_contaier .footer_f p {
+  line-height: normal;
+}
+
+.product {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.product .product_product {
+  text-align: center;
+  border: 1px solid black;
+  width: 12rem;
+  height: fit-content;
+}
+.product .product_product div .product_img img {
+  width: 10rem;
+  height: fit-content;
+}
+.Index_page {
+  width: 100%;
+  padding: 1rem 3rem;
+}
+.Index_page .Index_container {
+  display: flex;
+  padding: 1rem 0;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .Nav {
+  border: 1px solid #546fca;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .Nav .Tile {
+  background: #546fca;
+  text-align: center !important;
+  padding: 0 !important;
+  color: white;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .Nav .IT {
+  padding-left: 1rem;
+  border: 1px solid black;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .Nav .IT a {
+  text-decoration: none;
+  color: white;
+  color: black !important;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .Nav .IT a:hover {
+  color: green !important;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .Nav .IT .active {
+  color: green !important;
+  background: none;
+}
+.Index_page .Index_container .Index_contaier_navbar .NavProduct .img {
+  padding-top: 1rem;
+}
+.Index_page .Index_container .Index_contaier_products {
+  height: fit-content;
+  width: 100%;
+  grid-column: 2;
+}
+.Index_page .Index_container .Index_contaier_products .ListItems {
+  padding-left: 3rem;
+}
+.Index_page .Index_container .Index_contaier_products .ListItems .ListItems_title {
+  background: #546fca;
+  padding: 0.5rem;
+}
+.Index_page .Index_container .Index_contaier_products .ListItems .ListItems_Container .product-list {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Global User Interface, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+/*# sourceMappingURL=site.css.map */

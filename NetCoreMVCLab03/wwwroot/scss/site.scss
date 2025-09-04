@@ -1,0 +1,14 @@
+@use "Navbar.scss";
+@use "Footer.scss";
+@use "Index.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Global User Interface, sans-serif;
+}
+
+body {
+    position: relative;
+}

@@ -1,0 +1,26 @@
+﻿.product {
+    //padding: 0.5rem;
+    //box-sizing: border-box;
+    //max-width: calc(25% - 1rem);
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    .product_product {
+        text-align: center;
+        border: 1px solid black;
+        width: 12rem;
+        height: fit-content;
+
+        div {
+            .product_img img {
+                width: 10rem;
+                height: fit-content;
+            }
+
+            .product_title {
+                //width: 10rem;
+            }
+        }
+    }
+}

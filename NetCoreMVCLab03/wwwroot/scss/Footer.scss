@@ -1,0 +1,27 @@
+@use "root.scss" as *;
+
+.footer {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+
+    .footer_contaier {
+        display: flex;
+        height: fit-content;
+        background: $bg-footer;
+
+        .footer_f {
+            width: 50%;
+            height: fit-content;
+            //border: 1px solid blue;
+            white-space: normal;
+            word-wrap: break-word;
+            padding: 1rem;
+            color: white;
+        }
+
+        .footer_f p {
+            line-height: normal;
+        }
+    }
+}

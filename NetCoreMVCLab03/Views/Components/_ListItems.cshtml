@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	var listItems = ViewBag.ListItems as List<NetCoreMVCLab03.Models.ListItem>;
+	var selectedItem = ViewBag.SelectedItem as NetCoreMVCLab03.Models.ListItem;
+}
+
+<div class="ListItems">
+	<div class="ListItems_title">
+		<span>Sản phẩm mới nhất</span>
+	</div>
+	<div class="ListItems_Container">
+		@if (selectedItem != null)
+		{
+		@* <h2>@selectedItem.Id</h2> *@
+			<div class="product-list">
+				@foreach (var product in selectedItem.GetItems())
+				{
+					<partial name="~/Views/Components/_Product.cshtml" model="product" />
+				}
+			</div>
+		}
+		else
+		{
+			<div class="product-list">
+				@foreach (var product in listItems[0].GetItems())
+				{
+					<partial name="~/Views/Components/_Product.cshtml" model="product" />
+				}
+			</div>
+		}
+	</div>
+	<div class="ListItems_title">
+		<span>Sản phẩm mới nhất</span>
+	</div>
+	<div class="ListItems_Container">
+		@if (selectedItem != null)
+		{
+		@* <h2>@selectedItem.Id</h2> *@
+			<div class="product-list">
+				@foreach (var product in selectedItem.GetItems())
+				{
+					<partial name="~/Views/Components/_Product.cshtml" model="product" />
+				}
+			</div>
+		}
+		else
+		{
+			<div class="product-list">
+				@foreach (var product in listItems[0].GetItems())
+				{
+					<partial name="~/Views/Components/_Product.cshtml" model="product" />
+				}
+			</div>
+		}
+	</div>
+</div>
