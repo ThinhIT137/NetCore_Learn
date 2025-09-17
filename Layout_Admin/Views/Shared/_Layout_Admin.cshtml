@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/scss/site_admin.css" />
+</head>
+<body>
+    <partial name="Admin/_Header_admin"/>
+
+    <div class="container-fluid">
+        <div class="container-container">
+            <div class="">
+                <partial name="Admin/_Menu_List" />
+            </div>
+            <div class="main">
+                <div id="content-area">
+                    @RenderBody()
+                </div>
+                @RenderSection("Scripts", required: false)
+            </div>
+        </div>
+    </div>
+    @* <partial name="_Footer" /> *@
+</body>
+<script src="/js/site_admin.js"></script>
+<script src="/js/charts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function loadView(url) {
+        $("#content-area").load("/" + url, function(){
+            if (typeof initCharts === "function") {
+                initCharts();
+            }
+            if (typeof initRecentActivity === "function") {
+                initRecentActivity();
+            }
+        }); // nạp view vào content-area
+    }
+</script>
+</html>

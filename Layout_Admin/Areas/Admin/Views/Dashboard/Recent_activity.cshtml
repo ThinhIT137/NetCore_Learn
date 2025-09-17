@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Hoạt động gần đây";
+}
+
+<h2 class="mb-4">Hoạt động gần đây</h2>
+
+<div class="row">
+    <!-- Timeline -->
+    <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm">
+            <h5 class="card-title">Dòng thời gian</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <span class="fw-bold">12/09/2025</span> - Người dùng <b>Thịnh</b> đăng nhập hệ thống
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">11/09/2025</span> - Thêm sản phẩm <b>Trà sữa Matcha</b>
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">10/09/2025</span> - Xuất hóa đơn <b>#HD1023</b>
+                </li>
+                <li class="list-group-item">
+                    <span class="fw-bold">09/09/2025</span> - Tạo tài khoản nhân viên <b>Nguyễn Văn A</b>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bảng hoạt động -->
+    <div class="col-md-6 mb-3">
+        <div class="card p-3 shadow-sm">
+            <h5 class="card-title">Chi tiết hoạt động</h5>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Thời gian</th>
+                        <th>Người thực hiện</th>
+                        <th>Hoạt động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/09/2025 14:30</td>
+                        <td>Thịnh</td>
+                        <td>Đăng nhập hệ thống</td>
+                    </tr>
+                    <tr>
+                        <td>11/09/2025 09:15</td>
+                        <td>Thịnh</td>
+                        <td>Thêm sản phẩm mới</td>
+                    </tr>
+                    <tr>
+                        <td>10/09/2025 16:45</td>
+                        <td>Admin</td>
+                        <td>Xuất hóa đơn #HD1023</td>
+                    </tr>
+                    <tr>
+                        <td>09/09/2025 08:20</td>
+                        <td>Admin</td>
+                        <td>Tạo tài khoản nhân viên</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <!-- Biểu đồ hoạt động -->
+    <div class="col-md-12">
+        <div class="card p-3 shadow-sm">
+            <h5 class="card-title">Tần suất hoạt động (7 ngày qua)</h5>
+            <canvas id="activityChart" height="100"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    function initRecentActivity() {
+        new Chart(document.getElementById("activityChart"), {
+            type: 'bar',
+            data: {
+                labels: ["09/09", "10/09", "11/09", "12/09", "13/09", "14/09", "15/09"],
+                datasets: [{
+                    label: "Số hoạt động",
+                    data: [5, 7, 4, 9, 3, 6, 8],
+                    backgroundColor: "rgba(54, 162, 235, 0.6)"
+                }]
+            }
+        });
+    }
+</script>

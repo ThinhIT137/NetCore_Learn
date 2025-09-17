@@ -1,0 +1,102 @@
+.Menu_List {
+    background: $bgr_listNav;
+    height: 100vh;
+    width: 5rem;
+
+    .Menu_List_Container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 0;
+        max-height: 90vh;
+        overflow-y: hidden;
+
+        div {
+            color: $color_MenuList;
+            padding: 0.5rem;
+            font-size: 15px;
+
+            .topic {
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+
+                .icon {
+                    font-size: 20px;
+                }
+
+                span {
+                    padding: 0 0.1rem;
+                    display: none;
+                }
+
+                .fa-angle-down {
+                    display: none;
+                }
+            }
+
+            .topic:hover {
+                background: $color_hover;
+                border: 1px solid #c3e7fe;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            .column {
+                display: none;
+                flex-direction: column;
+                border-left: 1px solid #BE0000;
+                margin-left: 1rem;
+                font-size: 13px;
+                padding: 0 0 0 8px;
+
+                a {
+                    padding: 2px;
+                    color: $color_MenuList !important;
+                }
+
+                a:hover {
+                    background: $color_hover;
+                    border: 1px solid #c3e7fe;
+                    padding: 1px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+.column {
+    display: none;
+}
+
+.column.active {
+    display: flex !important; 
+}
+
+.Menu_List:hover, .Menu_List.active {
+    width: 16.87rem;
+
+    .Menu_List_Container {
+        display: flex;
+
+        div {
+            .topic {
+
+                span {
+                    display: block;
+                }
+
+                .fa-angle-down {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .Menu_List_Container:hover {
+        overflow-y: auto;
+    }
+}
+
+

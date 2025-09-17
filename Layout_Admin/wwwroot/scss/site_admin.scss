@@ -1,0 +1,48 @@
+@use "root" as *;
+@import "Areas_Admin/Index";
+@import "Areas_Admin/Menu_List";
+@import "Areas_Admin/Header";
+
+@import "Areas_Admin/Dashboard/Overview.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $bgr;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-fluid {
+    margin-left: 0;
+    padding: 0;
+
+    .container-container {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .main {
+            padding: 0 12px;
+            flex: 1;
+
+            #content-area {
+                height: 90vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                //margin: 0 auto;
+                //padding: 0 10rem;
+            }
+        }
+    }
+}

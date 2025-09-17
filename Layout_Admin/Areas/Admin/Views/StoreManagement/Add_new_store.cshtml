@@ -1,0 +1,32 @@
+﻿@model Layout_Admin.Areas.Admin.Models.Store
+
+<h3 class="mb-3">Thêm cửa hàng mới</h3>
+
+<form asp-action="Add_new_store" method="post">
+    <div class="mb-3">
+        <label asp-for="TenCuaHang" class="form-label"></label>
+        <input asp-for="TenCuaHang" class="form-control" placeholder="Nhập tên cửa hàng" />
+        <span asp-validation-for="TenCuaHang" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DiaChi" class="form-label"></label>
+        <input asp-for="DiaChi" class="form-control" placeholder="Nhập địa chỉ cửa hàng" />
+        <span asp-validation-for="DiaChi" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SoDienThoai" class="form-label"></label>
+        <input asp-for="SoDienThoai" class="form-control" placeholder="Nhập số điện thoại" />
+        <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NgayKhaiTruong" class="form-label"></label>
+        <input asp-for="NgayKhaiTruong" type="date" class="form-control" />
+        <span asp-validation-for="NgayKhaiTruong" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Thêm cửa hàng</button>
+    <a asp-action="List_of_stores" class="btn btn-secondary">Quay lại</a>
+</form>

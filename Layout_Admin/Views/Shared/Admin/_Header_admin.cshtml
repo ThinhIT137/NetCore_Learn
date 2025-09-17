@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var notiList = ViewData["Notifications"] as List<Layout_Admin.Areas.Admin.Models.Notifications>;
+}
+
+@model IEnumerable<Layout_Admin.Areas.Admin.Models.Notifications>
+
+<header class="">
+    <div class="Header_container">
+        <div class="logo_container">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="/img/logo_mixue.png" alt="" />
+                </a>
+            </div>
+            <div class="menu">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="nav_container_1">
+                <div class="search">
+                    <input class="search_title" type="" value="" />
+                    <i id="IconSearch" class="fa-solid fa-magnifying-glass"></i>
+                    <div class="X_search"><i id="IconX_Search" class="fa-solid fa-x"></i></div>
+                </div>
+                <div id="settings" class="settings">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div id="projects" class="projects">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+            </div>
+            <div class="nav_container_2">
+                <div class="notifications">
+                    <i id="NotificationsIcon" class="fa-solid fa-bell"></i>
+                    <div id="Notifications">
+                        <div class="Notifications_Container">
+                            @foreach (var i in notiList)
+                            {
+                                <partial name="~/Views/Shared/Admin/notification.cshtml" model="i" />
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="bgr_clr">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div class="online">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="user_container">
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="calendar">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+        </div>
+    </div>
+</header>

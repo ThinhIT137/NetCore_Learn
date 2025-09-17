@@ -1,0 +1,27 @@
+.notification_container {
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 20px;
+    background: $bgr;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    //justify-content: space-between;
+    cursor: pointer;
+
+    .avt {
+        border-radius: 50%;
+        background: white;
+        border: 1px solid #3333;
+        width: 40px;
+        height: 40px;
+    }
+
+    .notification {
+        padding-left: 10px;
+    }
+}
+
+.notification_container:hover {
+    background: $color_hover;
+}
