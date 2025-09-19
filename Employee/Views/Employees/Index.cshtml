@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Employee.Models.Employees>
+
+<form asp-action="Index" method="post">
+    <label>Họ tên</label>
+    <input name="fullName" />
+
+    <label>Giới tính</label>
+    <input name="gender" />
+
+    <label>Số điện thoại</label>
+    <input name="phone" />
+
+    <label>Email</label>
+    <input name="email" />
+
+    <label>Lương</label>
+    <input name="salary" type="number" />
+
+    <label>Trạng thái</label>
+    <input name="status" type="number" />
+
+    <button type="submit">Thêm</button>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Họ tên</th>
+            <th>Giới tính</th>
+            <th>Email</th>
+            <th>Điện thoại</th>
+            <th>Lương</th>
+            <th>Trạng thái</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.id</td>
+            <td>@emp.fullName</td>
+            <td>@emp.gender</td>
+                <td>@emp.email</td>
+                <td>@emp.phone</td>
+                <td>@emp.salary</td>
+                @if (@emp.status == 1){
+                    <td>Đang đi làm</td>
+                }
+                else if (@emp.status == 0){
+                
+                    <td>Đang nghỉ</td>
+                }
+                else if (@emp.status==2){
+                    <td>Đang thử việc</td>
+                }
+                else if (@emp.status == 3)
+                {
+                    <td>Đang nghỉ phép</td>
+                }
+        </tr>
+    }
+    </tbody>
+</table>
