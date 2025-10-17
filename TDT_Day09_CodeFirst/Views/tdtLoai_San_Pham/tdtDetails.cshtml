@@ -1,0 +1,36 @@
+﻿@model TDT_Day09_CodeFirst.Models.tdtLoai_San_Pham
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>tdtLoai_San_Pham</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tdtMaLoai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tdtMaLoai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tdtTenLoai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tdtTenLoai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tdtTrangThai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tdtTrangThai)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="tdtEdit" asp-route-id="@Model?.tdtId">Edit</a> |
+    <a asp-action="tdtIndex">Back to List</a>
+</div>

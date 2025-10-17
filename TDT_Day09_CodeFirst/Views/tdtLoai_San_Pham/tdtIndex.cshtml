@@ -1,0 +1,47 @@
+﻿@model IEnumerable<TDT_Day09_CodeFirst.Models.tdtLoai_San_Pham>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="tdtCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tdtMaLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tdtTenLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tdtTrangThai)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tdtMaLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tdtTenLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tdtTrangThai)
+            </td>
+            <td>
+                <a asp-action="tdtEdit" asp-route-id="@item.tdtId">Edit</a> |
+                <a asp-action="tdtDetails" asp-route-id="@item.tdtId">Details</a> |
+                <a asp-action="tdtDelete" asp-route-id="@item.tdtId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

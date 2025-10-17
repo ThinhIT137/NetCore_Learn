@@ -1,0 +1,43 @@
+﻿@model TDT_Day09_CodeFirst.Models.tdtLoai_San_Pham
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>tdtLoai_San_Pham</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="tdtCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="tdtMaLoai" class="control-label"></label>
+                <input asp-for="tdtMaLoai" class="form-control" />
+                <span asp-validation-for="tdtMaLoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tdtTenLoai" class="control-label"></label>
+                <input asp-for="tdtTenLoai" class="form-control" />
+                <span asp-validation-for="tdtTenLoai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tdtTrangThai" class="control-label"></label>
+                <input asp-for="tdtTrangThai" class="form-control" />
+                <span asp-validation-for="tdtTrangThai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="tdtIndex">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
