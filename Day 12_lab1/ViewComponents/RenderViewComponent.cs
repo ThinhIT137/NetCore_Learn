@@ -11,8 +11,8 @@ namespace Day_12_lab1.ViewComponents
         {
             menuItems = new List<MenuItem>()
             {
-                new MenuItem() {Id=1, Name="List Student", Link="Admin/Student/list" },
-                new MenuItem() {Id=2, Name="Add Student", Link="Admin/Student/add" },
+                new MenuItem() {Id=1, Name="List Student", Link="/Admin/Student/list" },
+                new MenuItem() {Id=2, Name="Add Student", Link="/Admin/Student/add" },
             };
         }
 
